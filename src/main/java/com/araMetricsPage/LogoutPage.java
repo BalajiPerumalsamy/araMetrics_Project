@@ -19,6 +19,9 @@ public class LogoutPage extends BaseClass
     public @FindBy(xpath="//h1[text()='Welcome to araMetrics!']")
     WebElement validationMessage;
 
+    public @FindBy(xpath="//div[text()='Logged out successfully!']")
+    WebElement toastMessage;
+
 
     public void logout()
     {

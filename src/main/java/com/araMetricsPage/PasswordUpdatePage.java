@@ -26,6 +26,15 @@ public class PasswordUpdatePage extends BaseClass
     @FindBy(xpath="//button[text()='Update Password']")
     WebElement updatePasswordButton;
 
+    public @FindBy(xpath="//div[text()='Password changed successfully']")
+    WebElement successMessage;
+
+    public @FindBy(xpath="//div[text()='Password must include uppercase, lowercase, number, and special character (@$!%*?&)']")
+    WebElement errorMessage;
+
+    public @FindBy(xpath="//div[text()='newPassword must be longer than or equal to 8 characters']")
+    WebElement lessThanErrorMessage;
+
 
     public void updatePassword(String currentPass,String newPass)
     {

@@ -28,6 +28,9 @@ public class Login_Page extends BaseClass
     public @FindBy(xpath="//img[@alt='Expanded Logo']")
     WebElement verifyLoginFunction;
 
+    public @FindBy(xpath="//div[text()='Logged in successfully!']")
+    WebElement toastMessage;
+
     @FindBy(xpath="//div[text()='Invalid credentials']")
     WebElement invalidLoginFunction;
 
