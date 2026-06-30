@@ -26,17 +26,17 @@ public class PasswordUpdatePage extends BaseClass
     @FindBy(xpath="//button[text()='Update Password']")
     WebElement updatePasswordButton;
 
-    @FindBy(xpath="//div[@id='3']")
-    WebElement successMessage;
 
     public void updatePassword(String currentPass,String newPass)
     {
         clickButton(settingsButton);
         Actions act=new Actions(driver);
-        act.scrollByAmount(0,300).perform();
+
+        act.moveToElement(currentPassword).perform();
         writeText(currentPass,currentPassword);
+        act.moveToElement(newPassword).perform();
         writeText(newPass,newPassword);
+        act.moveToElement(updatePasswordButton).perform();
         clickButton(updatePasswordButton);
-        System.out.println(successMessage.getText());
     }
 }
