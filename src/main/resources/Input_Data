@@ -1,7 +1,16 @@
 url=https://dev.arametrics.app/
 
 email=pb23082001@gmail.com
-password=Balaji
+password=Balaji@1
 
 invalidEmail=pb2308200@gmail.com
 invalidPassword=password@1
+
+currentPassword=Balaji@1
+newPassword=Balaji@1
+
+invalidPassword1=BalajiP@
+invalidPassword2=balaji@1
+invalidPassword3=BALAJI@1
+invalidPassword4=BalajiP1
+invalidPassword5=Balu@1

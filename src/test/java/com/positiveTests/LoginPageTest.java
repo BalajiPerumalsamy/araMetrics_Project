@@ -29,6 +29,8 @@ public class LoginPageTest
         loginPage.login(baseClass.properties.getProperty("email"),baseClass.properties.getProperty("password"));
         Assert.assertTrue(loginPage.verifyLoginFunction.isDisplayed(),
                 "couldn't navigate to Dashboard page");
+        Assert.assertTrue(loginPage.toastMessage.isDisplayed(),
+                "couldn't navigate to Dashboard page");
     }
 
     @AfterMethod

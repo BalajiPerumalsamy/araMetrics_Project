@@ -4,6 +4,7 @@ import com.araMetricsPage.Login_Page;
 import com.araMetricsPage.PasswordUpdatePage;
 import com.basePage.BaseClass;
 import com.listeners.MyListener;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -23,6 +24,8 @@ public class PasswordUpdatePageTest
         baseClass.navigateToApplication();
         loginPage=new Login_Page();
         loginPage.login(baseClass.properties.getProperty("email"),baseClass.properties.getProperty("password"));
+        Assert.assertTrue(loginPage.verifyLoginFunction.isDisplayed(),
+                "couldn't navigate to Dashboard page");
 
     }
 
@@ -32,6 +35,7 @@ public class PasswordUpdatePageTest
         passwordUpdatePage=new PasswordUpdatePage();
         passwordUpdatePage.updatePassword(baseClass.properties.getProperty("currentPassword"),
                 baseClass.properties.getProperty("newPassword"));
+        Assert.assertTrue(passwordUpdatePage.successMessage.isDisplayed(),"Password couldn't update");
 
     }
 

@@ -3,10 +3,10 @@
 <suite name="Functional_Suite">
     <test name="TestClassesExecute">
         <classes>
+            <class name="com.positiveTests.LoginPageTest"/>
+            <class name="com.negativeTests.LoginPageTest"/>
             <class name="com.positiveTests.LogoutPageTest"/>
             <class name="com.positiveTests.PasswordUpdatePageTest"/>
-            <!--<class name="com.positiveTests.LoginPageTest"/>
-            <class name="com.negativeTests.LoginPageTest"/>-->
         </classes>
     </test>
 </suite>
